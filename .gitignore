@@ -127,3 +127,10 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# MISC
+poliformat/
+models/
+*.db
+*.db-shm
+*.db-wal

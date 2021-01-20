@@ -1,0 +1,73 @@
+version: '2.0'
+config:
+  store_entities_as_slots: true
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+intents:
+- greet:
+    use_entities: true
+- goodbye:
+    use_entities: true
+- affirm:
+    use_entities: true
+- deny:
+    use_entities: true
+- bot_challenge:
+    use_entities: true
+- ask_pizza:
+    use_entities: true
+- ask_pizza_size:
+    use_entities: true
+- ask_pizza_type:
+    use_entities: true
+- ask_pizza_size_type:
+    use_entities: true
+- say_delivery:
+    use_entities: true
+- say_pickup:
+    use_entities: true
+- say_address:
+    use_entities: true
+- say_time:
+    use_entities: true
+- say_type:
+    use_entities: true
+- say_size:
+    use_entities: true
+entities:
+- size
+- type
+slots: {}
+responses:
+  utter_greet:
+  - text: Hola! Como te puedo ayudar?
+  - text: Buenas! En que te puedo ayudar?
+  utter_goodbye:
+  - text: Espero haber sido de ayuda. Hasta luego!
+  - text: Hasta pronto!
+  utter_iamabot:
+  - text: En realidad, soy un robot. No se lo digas a nadie
+  - text: La respuesta a esa pregunta es muy relativa. Desde mi punto de vista, el robot eres tu.
+  utter_type:
+  - text: De que tipo?
+  utter_size:
+  - text: De que tamaño?
+  utter_pickup_delivery:
+  - text: Para llevar o para recoger?
+  utter_time:
+  - text: A que hora?
+  - text: Sobre que hora?
+  utter_address:
+  - text: En que direccion desea que se entregue?
+  utter_order_confirmation:
+  - text: Esta seguro de que desea llevar a cabo este pedido?
+  utter_success:
+  - text: Genial! Enseguida nos ponemos a trabajar!
+  utter_failure:
+  - text: Una lastima. Desea volver a comenzar el proceso del pedido?
+  utter_anything_else:
+  - text: Te puedo ayudar en algo mas?
+actions: []
+forms: {}
+e2e_actions: []

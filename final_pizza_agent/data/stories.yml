@@ -1,0 +1,19 @@
+version: "2.0"
+stories:
+- story: Story from Conversation ID 0c0c89bf295c4bb390b0821e128a0d1f
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: ask_pizza
+  - action: utter_type
+  - intent: say_type
+  - action: utter_size
+  - intent: say_size
+  - action: utter_pickup_delivery
+  - intent: say_pickup
+  - action: utter_time
+  - intent: say_time
+  - action: utter_order_confirmation
+  - intent: affirm
+  - action: utter_success
+  - action: utter_goodbye
