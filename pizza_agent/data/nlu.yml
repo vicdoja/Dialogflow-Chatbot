@@ -13,6 +13,8 @@ nlu:
     - vamos alla
     - yeee
     - holaaa
+    - ye
+    - ye paco
 - intent: goodbye
   examples: |
     - adios
@@ -24,6 +26,8 @@ nlu:
     - bye bye
     - au
     - hasta luego!
+    - nada, adios
+    - adios!
 - intent: affirm
   examples: |
     - si
@@ -38,6 +42,7 @@ nlu:
     - perfecto
     - si, completamente seguro
     - si, segurisimo
+    - si, muy seguro
 - intent: deny
   examples: |
     - no
@@ -52,6 +57,8 @@ nlu:
     - nope
     - na
     - no, nada mas
+    - nada mas
+    - no nada mas
 - intent: bot_challenge
   examples: |
     - eres un robot?
@@ -61,6 +68,7 @@ nlu:
     - estoy hablando con un humano?
     - estoy hablando con una persona?
     - de verdad eres un robot?
+    - eres un robot o una maquina?
 - intent: ask_pizza
   examples: |
     - queria una pizza
@@ -69,18 +77,22 @@ nlu:
     - deseo pedir unas pizzas
     - me gustaria pedir unas pizzas
     - pues me gustaria pedir una pizza
+    - pues queria pedir una pizza
+    - dame una pisa
 - intent: ask_pizza_type
   examples: |
     - queria pedir una pizza [barbacoa](type)
     - quiero una [carbonara](type)
     - me gustaria pedir una pizza [tropical](type)
     - quiero encargar una [margarita](type)
+    - me gustaria pedir una pizza [carbonara](type)
 - intent: ask_pizza_size
   examples: |
     - quiero una pizza [grande](size)
     - quiero encargar una pizza [pequeña](size)
     - me gustaria encargar unas pizzas [familiares](size)
     - deseo pedir unas cuantas pizzas [normales](size)
+    - quiero una pizza [pequeña](size)
 - intent: ask_pizza_size_type
   examples: |
     - queria pedir una pizza [barbacoa](type) [grande](size)
@@ -94,16 +106,21 @@ nlu:
     - desearia ir yo a recogerla
     - para recoger alli
     - para recoger alli, si es posible
+    - para recoger
+    - recoger
+    - para recoger, si pudiera ser
 - intent: say_delivery
   examples: |
     - seria para traer a casa
     - me gustaria que la trajeran aqui
     - desearia que la trajera un repartidor
+    - desearia que lo trajeran a casa
 - intent: say_address
   examples: |
     - vivo en la calle pepito numero tres
     - se entregaria en la avenida mi amigo juancar sin numero
     - avenida olimpica numero seis, torrent
+    - en calle manolito numero seis
 - intent: say_time
   examples: |
     - para las 9:30
@@ -112,42 +129,21 @@ nlu:
     - alrededor de la una y cuarto
     - a las diez en punto
     - sobre las dos menos cuarto
+    - mas o menos a las seis y diez, por favor
+    - sobre la una menos cuarto
 - intent: say_type
   examples: |
     - [margarita](type)
     - [margaritas](type) las dos
     - [carbonara](type)
     - pueeeees... una [carbonara](type)
+    - [hawaiana](type)
+    - [barbacoa](type)
+    - pues una [barbacoa](type)
 - intent: say_size
   examples: |
     - [grandes](size) las dos
     - [familiares](size)
     - [familiar](size)
-- lookup: size
-  examples: |
-    - familiar
-    - familiares
-    - grande
-    - grandes
-    - mediana
-    - medianas
-    - normal
-    - normales
-    - pequeña
-    - pequeñas
-- lookup: type
-  examples: |
-    - americana
-    - barbacoa
-    - cuatro quesos
-    - jamon y queso
-    - jamon york y queso
-    - jamon|jamon york
-    - margarita
-    - napolitana
-    - carbonara
-    - chorizo
-    - pepperoni
-    - con piña
-    - hawaiana
-    - tropical
+    - normal, si puede ser
+    - [pequeña](size)[pequeña](size)

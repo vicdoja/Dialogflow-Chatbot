@@ -1,1 +1,143 @@
 version: "2.0"
+stories:
+- story: HeyBye
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: goodbye
+  - action: utter_goodbye
+- story: Story from Conversation ID be7993325c604882a16668ffcf35d742
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: ask_pizza
+  - action: utter_type
+  - intent: say_type
+    entities:
+    - type: hawaiana
+  - action: utter_size
+  - intent: say_size
+    entities:
+    - size: pequeña
+  - action: utter_pickup_delivery
+  - intent: say_pickup
+  - action: utter_time
+  - intent: say_time
+  - action: utter_order_confirmation
+  - intent: affirm
+  - action: utter_success
+  - action: utter_anything_else
+  - action: utter_anything_else
+  - intent: deny
+  - action: utter_goodbye
+- story: Story from Conversation ID 57da8f88f9d249b0aacd4a9b8965a9ed
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: bot_challenge
+  - action: utter_iamabot
+  - intent: goodbye
+  - action: utter_goodbye
+- story: Story from Conversation ID 65718898a3d84bbcafbb6e0bd22607fd
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: ask_pizza_size
+    entities:
+    - size: pequeña
+  - action: utter_type
+  - intent: say_type
+    entities:
+    - type: barbacoa
+  - action: utter_pickup_delivery
+  - intent: say_delivery
+  - action: utter_address
+  - intent: say_address
+  - action: utter_time
+  - intent: say_time
+  - action: utter_order_confirmation
+  - intent: affirm
+  - action: utter_success
+  - action: utter_anything_else
+  - intent: deny
+  - action: utter_goodbye
+- story: Story from Conversation ID 65718898a3d84bbcafbb6e0bd22607fd dup
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: ask_pizza_size
+    entities:
+    - size: pequeña
+  - action: utter_type
+  - intent: say_type
+    entities:
+    - type: barbacoa
+  - action: utter_pickup_delivery
+  - intent: say_delivery
+  - action: utter_address
+  - intent: say_address
+  - action: utter_time
+  - intent: say_time
+  - action: utter_order_confirmation
+  - intent: deny
+  - action: utter_failure
+  - action: utter_anything_else
+  - intent: deny
+  - action: utter_goodbye
+- story: failed pickup
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: ask_pizza
+  - action: utter_type
+  - intent: say_type
+    entities:
+    - type: hawaiana
+  - action: utter_size
+  - intent: say_size
+    entities:
+    - size: pequeña
+  - action: utter_pickup_delivery
+  - intent: say_pickup
+  - action: utter_time
+  - intent: say_time
+  - action: utter_order_confirmation
+  - intent: deny
+  - action: utter_failure
+  - action: utter_anything_else
+  - intent: deny
+  - action: utter_goodbye
+- story: failed pickup con challenge
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: ask_pizza_size
+    entities:
+    - size: pequeña
+  - action: utter_type
+  - intent: say_type
+    entities:
+    - type: barbacoa
+  - action: utter_pickup_delivery
+  - intent: bot_challenge
+  - action: utter_iamabot
+  - action: utter_pickup_delivery
+  - intent: say_delivery
+  - action: utter_address
+  - intent: say_address
+  - action: utter_time
+  - intent: say_time
+  - action: utter_order_confirmation
+  - intent: affirm
+  - action: utter_success
+  - action: utter_anything_else
+  - intent: deny
+  - action: utter_goodbye
+- story: Story from Conversation ID de211ef86c7c408fac0a1ffd620dfb69
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: bot_challenge
+  - action: utter_iamabot
+  - intent: goodbye
+  - action: utter_goodbye

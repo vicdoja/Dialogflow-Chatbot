@@ -3,18 +3,20 @@
 language: es
 
 pipeline:
+  - name: SpacyNLP
   - name: SpacyTokenizer
   - name: LanguageModelFeaturizer
     model_name: bert
-    model_weights: mrm8488/TinyBERT-spanish-uncased-finetuned-ner
+    model_weights: Geotrend/bert-base-es-cased
   - name: DIETClassifier
-    epochs: 100
+    epochs: 500
+  - name: RegexEntityExtractor
   - name: EntitySynonymMapper
   - name: ResponseSelector
-    epochs: 100
+    epochs: 500
   - name: FallbackClassifier
-    threshold: 0.3
-    ambiguity_threshold: 0.1
+    threshold: 0.1
+    ambiguity_threshold: 0.01
 #  - name: SpacyNLP
 #  - name: SpacyTokenizer
 #  - name: SpacyFeaturizer
