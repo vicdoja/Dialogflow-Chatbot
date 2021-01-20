@@ -68,21 +68,22 @@ nlu:
     - me gustaria pedir una pizza
     - deseo pedir unas pizzas
     - me gustaria pedir unas pizzas
+    - pues me gustaria pedir una pizza
 - intent: ask_pizza_type
   examples: |
-    - queria pedir una pizza barbacoa
-    - quiero una carbonara
-    - me gustaria pedir una pizza tropical
-    - quiero encargar una margarita
+    - queria pedir una pizza [barbacoa](type)
+    - quiero una [carbonara](type)
+    - me gustaria pedir una pizza [tropical](type)
+    - quiero encargar una [margarita](type)
 - intent: ask_pizza_size
   examples: |
-    - quiero una pizza grande
-    - quiero encargar una pizza pequeña
-    - me gustaria encargar unas pizzas familiares
-    - deseo pedir unas cuantas pizzas normales
+    - quiero una pizza [grande](size)
+    - quiero encargar una pizza [pequeña](size)
+    - me gustaria encargar unas pizzas [familiares](size)
+    - deseo pedir unas cuantas pizzas [normales](size)
 - intent: ask_pizza_size_type
   examples: |
-    - queria pedir una pizza barbacoa grande
+    - queria pedir una pizza [barbacoa](type) [grande](size)
     - quiero encargar unas [napolitana](type) [pequeñas](size)
     - me gustaria pedir una pizza [mediana](size) [carbonara](type)
 - intent: say_pickup
@@ -113,18 +114,40 @@ nlu:
     - sobre las dos menos cuarto
 - intent: say_type
   examples: |
-    - margarita
-    - margaritas las dos
-    - carbonara
+    - [margarita](type)
+    - [margaritas](type) las dos
+    - [carbonara](type)
     - pueeeees... una [carbonara](type)
 - intent: say_size
   examples: |
-    - grandes las dos
-    - familiares
+    - [grandes](size) las dos
+    - [familiares](size)
+    - [familiar](size)
+- lookup: size
+  examples: |
     - familiar
-- regex: size
+    - familiares
+    - grande
+    - grandes
+    - mediana
+    - medianas
+    - normal
+    - normales
+    - pequeña
+    - pequeñas
+- lookup: type
   examples: |
-    - [familiar|familiares|grande|grandes|mediana|medianas|normal|normales|pequeña|pequeñas]]
-- regex: type
-  examples: |
-    - [americana|barbacoa|cuatro quesos|jamon y queso|jamon york y queso|jamon|jamon york|margarita|napolitana|carbonara|chorizo|pepperoni|con piña|hawaiana|tropical]
+    - americana
+    - barbacoa
+    - cuatro quesos
+    - jamon y queso
+    - jamon york y queso
+    - jamon|jamon york
+    - margarita
+    - napolitana
+    - carbonara
+    - chorizo
+    - pepperoni
+    - con piña
+    - hawaiana
+    - tropical
