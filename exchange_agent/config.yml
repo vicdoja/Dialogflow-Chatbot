@@ -1,0 +1,23 @@
+language: "es_core_news_lg"
+pipeline:
+- name: SpacyNLP
+  case_sensitive: true
+- name: SpacyTokenizer
+- name: LanguageModelFeaturizer
+  model_name: bert
+  model_weights: Geotrend/bert-base-es-cased
+- name: DIETClassifier
+  epochs: 500
+- name: RegexEntityExtractor
+- name: EntitySynonymMapper
+- name: ResponseSelector
+  epochs: 500
+- name: FallbackClassifier
+  threshold: 0.1
+  ambiguity_threshold: 0.01
+policies:
+- name: MemoizationPolicy
+- name: TEDPolicy
+  max_history: 5
+  epochs: 1000
+- name: RulePolicy

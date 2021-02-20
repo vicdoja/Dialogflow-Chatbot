@@ -1,0 +1,186 @@
+version: "2.0"
+stories:
+- story: No continuar con coin rate
+  steps:
+  - intent: ask_rate
+  - action: coin_rate_form
+  - active_loop: coin_rate_form
+  - intent: cancel
+  - action: utter_ask_continue
+  - intent: deny
+  - action: utter_failure
+  - action: action_deactivate_loop
+  - active_loop: null
+  - action: utter_anything_else
+- story: Story from Conversation ID 30b5d84efb5549bd881e3e5fcdb44457
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_ask_need_help
+  - intent: deny
+  - action: utter_goodbye
+- story: Story from Conversation ID 6f3d3848c69448318bbe859588b44abb
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_ask_need_help
+  - intent: ask_rate
+  - action: coin_rate_form
+  - active_loop: coin_rate_form
+  - slot_was_set:
+    - requested_slot: coin
+  - intent: say_coin
+    entities:
+    - coin: EUR
+  - slot_was_set:
+    - coin: EUR
+  - action: coin_rate_form
+  - slot_was_set:
+    - coin: EUR
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: utter_checking
+  - action: action_coin_rate_api
+  - action: utter_anything_else
+  - intent: deny
+  - action: utter_goodbye
+- story: Story from Conversation ID 8d144b6fe3d646f7b8d698c53b0579db
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_ask_need_help
+  - intent: ask_rate
+  - action: coin_rate_form
+  - active_loop: coin_rate_form
+  - slot_was_set:
+    - requested_slot: coin
+  - slot_was_set:
+    - coin: USD
+  - slot_was_set:
+    - coin: USD
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: utter_checking
+  - action: action_coin_rate_api
+  - action: utter_anything_else
+  - intent: deny
+  - action: utter_goodbye
+- story: Story from Conversation ID bbeaaa48c0fc4593ab243a974045fb5e
+  steps:
+  - intent: ask_rate
+  - action: coin_rate_form
+  - active_loop: coin_rate_form
+  - slot_was_set:
+    - requested_slot: coin
+  - slot_was_set:
+    - coin: EUR
+  - slot_was_set:
+    - coin: EUR
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: utter_checking
+  - action: action_coin_rate_api
+  - action: utter_anything_else
+  - intent: deny
+  - action: utter_goodbye
+- story: Story from Conversation ID 8f84cdf6ca8f448db128209bec2abbfc
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_ask_need_help
+  - intent: ask_rate
+    entities:
+    - coin: CAD
+  - slot_was_set:
+    - coin: CAD
+  - action: coin_rate_form
+  - active_loop: coin_rate_form
+  - slot_was_set:
+    - coin: CAD
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: utter_checking
+  - action: action_coin_rate_api
+  - action: utter_anything_else
+  - intent: deny
+  - slot_was_set:
+    - coin: CAD
+  - action: utter_goodbye
+- story: Story from Conversation ID 10908153ea1a4491858cd364ffb9b385
+  steps:
+  - slot_was_set:
+    - coin: JPY
+  - action: utter_ask_need_help
+  - intent: ask_rate
+    entities:
+    - coin: EUR
+  - slot_was_set:
+    - coin: EUR
+  - action: coin_rate_form
+  - active_loop: coin_rate_form
+  - slot_was_set:
+    - coin: EUR
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: utter_checking
+  - action: action_coin_rate_api
+  - action: utter_anything_else
+  - intent: greet
+  - action: utter_checking
+  - action: utter_ask_need_help
+  - action: utter_anything_else
+  - action: utter_goodbye
+- story: Story from Conversation ID 07ed7a6f1c8641f2a076a0b9c78067c4
+  steps:
+  - intent: say_coin
+    entities:
+    - coin: JPY
+  - slot_was_set:
+    - coin: JPY
+  - action: action_coin_rate_api
+  - action: utter_anything_else
+  - intent: deny
+  - slot_was_set:
+    - coin: JPY
+  - action: utter_goodbye
+- story: Story from Conversation ID 63d4196379b84d5aa648dc9926ddb870
+  steps:
+  - intent: ask_rate
+    entities:
+    - coin: BTC
+  - slot_was_set:
+    - coin: BTC
+  - action: coin_rate_form
+  - active_loop: coin_rate_form
+  - slot_was_set:
+    - coin: BTC
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: utter_checking
+  - action: action_coin_rate_api
+  - action: utter_anything_else
+  - slot_was_set:
+    - coin: BTC
+  - intent: ask_rate
+    entities:
+    - coin: ETH
+  - slot_was_set:
+    - coin: ETH
+  - action: coin_rate_form
+  - active_loop: coin_rate_form
+  - slot_was_set:
+    - coin: ETH
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: utter_checking
+  - action: action_coin_rate_api
+  - action: utter_anything_else
+  - intent: deny
+  - action: utter_goodbye

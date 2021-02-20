@@ -134,3 +134,4 @@ models/
 *.db
 *.db-shm
 *.db-wal
+*api_secrets.py

@@ -1,0 +1,106 @@
+version: "2.0"
+nlu:
+- intent: greet
+  examples: |
+    - ey
+    - hola
+    - buenas
+    - buenos dias
+    - buenas tardes
+    - buenas noches
+    - holo
+    - dale calor
+    - vamos alla
+    - yeee
+    - holaaa
+    - ye
+    - ye paco
+- intent: goodbye
+  examples: |
+    - adios
+    - hasta luego
+    - hasta la vista
+    - nos vemos
+    - buenas noches
+    - bye
+    - bye bye
+    - au
+    - hasta luego!
+    - nada, adios
+    - adios!
+- intent: affirm
+  examples: |
+    - si
+    - s
+    - claro
+    - claro que si
+    - me parece bien
+    - correcto
+    - asi es
+    - de acuerdo
+    - ok
+    - perfecto
+    - si, completamente seguro
+    - si, segurisimo
+    - si, muy seguro
+- intent: deny
+  examples: |
+    - no
+    - n
+    - nunca
+    - no creo
+    - no me gusta
+    - ni de coña
+    - no te creas
+    - nah
+    - nop
+    - nope
+    - na
+    - no, nada mas
+    - nada mas
+    - no nada mas
+    - no, la verdad es que no
+    - no, muchas gracias
+- intent: bot_challenge
+  examples: |
+    - eres un robot?
+    - eres un humano?
+    - eres una persona?
+    - estoy hablando con un robot?
+    - estoy hablando con un humano?
+    - estoy hablando con una persona?
+    - de verdad eres un robot?
+    - eres un robot o una maquina?
+- intent: ask_rate
+  examples: |
+    - me gustaria sacar el precio de una moneda
+    - puedes decirme el precio de esta moneda?
+    - quiero saber el precio de una moneda
+    - necesito saber el valor de una moneda
+    - necesito saber el valor de una divisa
+    - si, necesito saber el valor de una moneda
+    - dame el valor de una divisa
+    - quiero saber el valor de una moneda
+    - saber el valor de [EUR](coin)
+    - me gustaria saber cuanto vale CAD
+    - si, saber el valor de [ETH](coin)
+    - cuanto vale [BTC](coin)
+    - si, cuanto vale [ETH](coin)
+- intent: cancel
+  examples: |
+    - quiero parar
+    - no quiero continuar
+    - cancelar
+    - para, por favor
+- intent: say_coin
+  examples: |
+    - de [USD](coin)
+    - me gustaria comprobar [EUR](coin)
+    - comprueba [GBP](coin)
+    - buscame [AUD](coin)
+    - [CAD](coin)
+    - en concreto, necesito comprobar [JPY](coin)
+    - necesito comprobar [JPY](coin)
+    - necesito comprobar [EUR](coin)
+    - dime el valor de [EUR](coin)
+    - [EUR](coin)

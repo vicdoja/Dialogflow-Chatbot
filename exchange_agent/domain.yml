@@ -1,0 +1,75 @@
+version: '2.0'
+config:
+  store_entities_as_slots: true
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+intents:
+- greet:
+    use_entities: true
+- goodbye:
+    use_entities: true
+- affirm:
+    use_entities: true
+- deny:
+    use_entities: true
+- bot_challenge:
+    use_entities: true
+- ask_rate:
+    use_entities: true
+- say_coin:
+    use_entities: true
+- cancel:
+    use_entities: true
+entities:
+- coin
+slots:
+  coin:
+    type: rasa.shared.core.slots.TextSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: true
+  requested_slot:
+    type: rasa.shared.core.slots.UnfeaturizedSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: false
+responses:
+  utter_greet:
+  - text: Hola!
+  - text: Buenas!
+  - text: Bienvenido!
+  utter_ask_need_help:
+  - text: En que te puedo ayudar?
+  - text: Te puedo ayudar en algo?
+  - text: Necesitas ayuda con algo?
+  utter_goodbye:
+  - text: Adios!
+  - text: Hasta luego!
+  - text: Hasta pronto!
+  utter_iamabot:
+  - text: Esa pregunta es demasiado personal.
+  - text: Soy tan humano como cualquier otra cafetera.
+  - text: 'ERROR 404: HUMANITY NOT FOUND.'
+  utter_ask_coin:
+  - text: Que moneda deseas comprobar?
+  utter_ask_continue:
+  - text: Desea continuar con el proceso?
+  utter_successful:
+  - text: Proceso completado!
+  utter_failure:
+  - text: Proceso cancelado.
+  utter_anything_else:
+  - text: Te puedo ayudar en algo mas?
+  utter_checking:
+  - text: Comprobando los datos...
+  - text: Solicitando informacion...
+actions:
+- action_coin_rate_api
+forms:
+  coin_rate_form:
+    coin:
+    - entity: coin
+      intent: say_coin
+      type: from_entity
+e2e_actions: []
