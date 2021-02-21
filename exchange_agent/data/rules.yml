@@ -16,3 +16,7 @@ rules:
   - action: utter_checking
   - action: action_coin_rate_api
   - action: utter_anything_else
+- rule: Desafiar al bot
+  steps:
+  - intent: bot_challenge
+  - action: utter_iamabot

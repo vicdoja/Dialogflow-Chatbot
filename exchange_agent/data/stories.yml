@@ -184,3 +184,45 @@ stories:
   - action: utter_anything_else
   - intent: deny
   - action: utter_goodbye
+- story: Story from Conversation ID 0dc715bd45a34e8ea2fee72b6b66870e
+  steps:
+  - intent: bot_challenge
+  - action: utter_iamabot
+  - intent: ask_rate
+    entities:
+    - coin: XML
+  - slot_was_set:
+    - coin: XML
+  - action: coin_rate_form
+  - active_loop: coin_rate_form
+  - slot_was_set:
+    - coin: XML
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: utter_checking
+  - action: action_coin_rate_api
+  - action: utter_anything_else
+  - intent: ask_rate
+    entities:
+    - coin: XLM
+  - slot_was_set:
+    - coin: XLM
+  - action: coin_rate_form
+  - active_loop: coin_rate_form
+  - slot_was_set:
+    - coin: XLM
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: utter_checking
+  - action: action_coin_rate_api
+  - action: utter_anything_else
+  - intent: deny
+  - action: utter_goodbye
+- story: Story from Conversation ID 83a4bcf7d2db4c3cb5b610755524e495
+  steps:
+  - intent: bot_challenge
+  - action: utter_iamabot
+  - intent: goodbye
+  - action: utter_goodbye

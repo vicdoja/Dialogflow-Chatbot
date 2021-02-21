@@ -15,6 +15,8 @@ nlu:
     - holaaa
     - ye
     - ye paco
+    - hey
+    - holaa
 - intent: goodbye
   examples: |
     - adios
@@ -61,6 +63,9 @@ nlu:
     - no nada mas
     - no, la verdad es que no
     - no, muchas gracias
+    - no, gracias
+    - No, ya esta, nada mas. Muchas gracias!
+    - No, nada mas, gracias
 - intent: bot_challenge
   examples: |
     - eres un robot?
@@ -71,6 +76,10 @@ nlu:
     - estoy hablando con una persona?
     - de verdad eres un robot?
     - eres un robot o una maquina?
+    - Buenas! Eres una persona?
+    - Hola, de verdad eres una persona?
+    - De verdad eres una persona?
+    - Eres de verdad una persona?
 - intent: ask_rate
   examples: |
     - me gustaria sacar el precio de una moneda
@@ -82,10 +91,23 @@ nlu:
     - dame el valor de una divisa
     - quiero saber el valor de una moneda
     - saber el valor de [EUR](coin)
-    - me gustaria saber cuanto vale CAD
+    - me gustaria saber cuanto vale [CAD](coin)
     - si, saber el valor de [ETH](coin)
     - cuanto vale [BTC](coin)
     - si, cuanto vale [ETH](coin)
+    - me gustaria saber el valor de [XLM](coin)
+    - me gusdtaria saber cuanto vale [EUR](coin)
+    - me gustaria saber cuanto vale [EUR](coin)
+    - hola, dime el valor de [JPY](coin)
+    - hola, me gustaria saber el valor de la moneda [JPY](coin)
+    - me gustaria saber el valor de la moneda [CAD](coin)
+    - hola, me gustaria saber el valor de una moneda
+    - sii, necesito saber el valor de una moneda
+    - Si, es que me he equivocado, dime el valor de [XLM](coin), por favor
+    - Entiendo, podrias decirme el valor de [XML](coin)?
+    - Si, dime el valor de [XLM](coin)
+    - Ajam, veo que dices la verdad. Me podrias decir el valor de [XML](coin), por favor?
+    - Entiendo, me podrias decir el valor de [XML](coin), por favor?
 - intent: cancel
   examples: |
     - quiero parar
@@ -104,3 +126,6 @@ nlu:
     - necesito comprobar [EUR](coin)
     - dime el valor de [EUR](coin)
     - [EUR](coin)
+    - cual es el valor de [BTC](coin)
+    - cuanto vale [EUR](coin)
+    - [USD](coin)

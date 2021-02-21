@@ -46,6 +46,10 @@ class ActionCoinRateAPI(Action):
         except (ConnectionError, Timeout, TooManyRedirects) as e:
             print(e)
 
-        dispatcher.utter_message(text="El último valor de %s es de %.2f USD" % (tracker.slots["coin"], data["data"][tracker.slots["coin"]]["quote"]["USD"]["price"]))
+        if data.get("data", None):
+            dispatcher.utter_message(text="El último valor de %s es de %.2f USD" % (tracker.slots["coin"], data["data"][tracker.slots["coin"]]["quote"]["USD"]["price"]))
+        else:
+            dispatcher.utter_message(text="Ha habido un error recuperando el valor de la moneda %s." % tracker.slots["coin"])
+            dispatcher.utter_message(text="Comprueba que es un símbolo válido y que está bien escrito.")
 
         return []
